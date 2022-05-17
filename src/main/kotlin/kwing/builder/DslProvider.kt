@@ -1,7 +1,10 @@
 package kwing.builder
 
 import java.awt.Component
+import java.awt.GridBagConstraints
 import javax.swing.*
+
+/* -------------------- */
 
 inline val JButton: JButton get() = JButton()
 inline val JCheckBox: JCheckBox get() = JCheckBox()
@@ -44,6 +47,8 @@ inline val JToolTip: JToolTip get() = JToolTip()
 inline val JTree: JTree get() = JTree()
 inline val JViewport: JViewport get() = JViewport()
 inline val JWindow: JWindow get() = JWindow()
+
+/* -------------------- */
 
 inline fun JButton(dsl: JButton.() -> Unit) = JButton().apply(dsl)
 inline fun JCheckBox(dsl: JCheckBox.() -> Unit) = JCheckBox().apply(dsl)
@@ -89,3 +94,7 @@ inline fun JToolTip(dsl: JToolTip.() -> Unit) = JToolTip().apply(dsl)
 inline fun JTree(dsl: JTree.() -> Unit) = JTree().apply(dsl)
 inline fun JViewport(dsl: JViewport.() -> Unit) = JViewport().apply(dsl)
 inline fun JWindow(dsl: JWindow.() -> Unit) = JWindow().apply(dsl)
+
+/* -------------------- */
+
+inline fun GridBagConstraints(dsl: GridBagConstraints.() -> Unit) = GridBagConstraints().apply(dsl)
