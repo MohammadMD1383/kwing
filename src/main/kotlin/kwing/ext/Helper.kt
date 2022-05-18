@@ -21,7 +21,7 @@ inline operator fun <T : Component> T.get(constraints: Any, index: Int) = Tuple(
 
 /* -------------------- */
 
-inline operator fun <T : Component> T.invoke(dsl: T.() -> Unit) = dsl()
+inline operator fun <T : Component> T.invoke(dsl: T.() -> Unit) = this.apply(dsl)
 
 @JvmName("invokeTInt")
 inline operator fun <T : Component> Pair<T, Int>.invoke(dsl: T.() -> Unit) = this.also { first.apply(dsl) }
