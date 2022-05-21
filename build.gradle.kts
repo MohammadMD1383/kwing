@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "ir.mmd.ktdev"
-version = "0.2.1"
+version = "0.2.2"
 
 java {
 	withSourcesJar()
@@ -35,7 +35,7 @@ tasks.test {
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
-		jvmTarget = JavaVersion.VERSION_17.toString()
+		jvmTarget = JavaVersion.VERSION_1_8.toString()
 		freeCompilerArgs = listOf("-Xcontext-receivers")
 	}
 }
